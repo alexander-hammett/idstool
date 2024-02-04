@@ -80,7 +80,23 @@ class IDSSerializer:
     def translate_specification(cls, specification: Specification) -> ET.Element:
 
         spec_node = ET.Element('ids:specification', name=specification.name,
-                            ifcVersion=specification.ifc_version)
+                               ifcVersion=specification.ifc_version)
+        
+        if specification.min_occurs == 0:
+            spec_node.set('minOccurs', '0')
+        elif specification.min_occurs == 1:
+            spec_node.set('minOccurs', '1')
+        else:
+            raise ValueError(f'Illegal minOccurs for Specification {specification.min_occurs}')
+        
+        if specification.max_occurs == 0:
+            spec_node.set('maxOccurs', '0')
+        elif specification.max_occurs == 1:
+            spec_node.set('maxOccurs', '1')
+        elif specification.max_occurs == -1:
+            spec_node.set('maxOccurs', 'unbounded')
+        else:
+            raise ValueError(f'Illegal maxOccurs for Specification {specification.min_occurs}')
         
         if specification.identifier is not None:
             spec_node.set('identifier', specification.identifier)
@@ -186,7 +202,7 @@ class IDSSerializer:
         entity_facet = ET.Element('ids:entity')
 
         name = ET.SubElement(entity_facet, 'ids:name')
-        name_val = cls.translate_value(facet.ifc_class)
+        name_val = cls.translate_value(facet.ifc_class.upper())
         name.append(name_val)
 
         if facet.predefined_type is not None:
