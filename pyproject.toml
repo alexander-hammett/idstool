@@ -5,6 +5,9 @@ description = " Python Tool to create IDS (Information delivery specification) f
 readme = "README.md"
 version = "0.1.0"
 requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
 license = {file = "LICENSE.txt"}
 keywords = ["IDS", "Information Delivery Specification", "openBIM"]
 authors = [
@@ -15,7 +18,7 @@ dependencies = [
 
 
 [project.urls]
-"Homepage" = "https://github.com/"
+"Homepage" = "https://github.com/alexander-hammett/idstool"
 
 [build-system]
 requires = ["setuptools >= 61.0"]
