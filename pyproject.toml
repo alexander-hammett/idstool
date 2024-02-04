@@ -1,0 +1,22 @@
+
+[project]
+name = "idstool"
+description = " Python Tool to create IDS (Information delivery specification) files"
+readme = "README.md"
+version = "0.1.0"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+keywords = ["IDS", "Information Delivery Specification", "openBIM"]
+authors = [
+    { name = "Alexander Hammett", email = "alexander.hammett@preisigag.ch" }
+]
+dependencies = [
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
