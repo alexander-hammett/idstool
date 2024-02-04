@@ -3,7 +3,7 @@
 name = "idstool"
 description = " Python Tool to create IDS (Information delivery specification) files"
 readme = "README.md"
-version = "0.1.0"
+version = "0.1.1"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
