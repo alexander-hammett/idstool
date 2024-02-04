@@ -123,4 +123,4 @@ class InformationDeliverySpecification:
     purpose: Optional[str] = None
     milestone: Optional[str] = None
 
-    specifications: list[Specification]
+    specifications: list[Specification] = ()

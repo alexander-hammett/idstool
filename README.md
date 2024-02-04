@@ -19,14 +19,14 @@ spec2 = ids.Specification(name='Hackathon Pset', ifc_version='IFC4',
                           applicability=ids.Applicability(facets=[ids.EntityFacet(ifc_class='IfcWall')]),
                           requirement=ids.Requirement(facets=[ids.PropertyFacet(property_set='Hackathon2024', property_name='AEC_Hack', datatype='IFCTEXT')]))
 
-ids = ids.InformationDeliverySpecification(
+ids_data = ids.InformationDeliverySpecification(
     title="AEC Hackathon Test IDS",
     version="0.1",
     purpose="Testing",
     specifications=[spec1, spec3]
 )
 
-ids.IDSSerializer.save_ids(filepath='example_ids', ids=ids)
+ids.IDSSerializer.save_ids(filepath='example_ids', ids=ids_data)
 ```
 
 
