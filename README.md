@@ -4,6 +4,15 @@
  Currently built on IDS version 0.9.6
 
 
+# Installation
+
+```
+pip install idstool
+```
+
+will do the trick. Currently Python 3.10+ is required though.
+
+
 # Example
 
 An example on how to use this library to create an IDS:
