@@ -8,7 +8,7 @@
 
 An example on how to use this library to create an IDS:
 
-```
+```python
 import idstool as ids
 
 spec1 = ids.Specification(name='Wall Specifications', ifc_version='IFC4',
