@@ -112,7 +112,7 @@ class Specification:
             raise ValueError(f'Illegal IFC version {ifc_version}')
 
 
-@dataclass(kw_only=True)
+@dataclass
 class InformationDeliverySpecification:
     title: str
     copyright: Optional[str] = None
